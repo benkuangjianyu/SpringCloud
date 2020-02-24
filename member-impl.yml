@@ -1,4 +1,4 @@
-spring: 
+﻿spring: 
   profiles: 
     active: 
     - dev
@@ -29,7 +29,7 @@ info:
   build.version: $project.version$
 ---
 server: 
-  port: 6001
+  port: 6002
 
 spring: 
   profiles: sit #开发环境
@@ -43,11 +43,11 @@ eureka:
     register-with-eureka: true
     fetch-registry: true #是否需要从eureka上获取注册信息
   instance: 
-    instance-id: member-6001-sit
+    instance-id: member-6002-sit
     prefer-ip-address: true
 
 info: 
-  app.name: member-6001-sit
+  app.name: member-6002-sit
   company.name: www.scloud.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
