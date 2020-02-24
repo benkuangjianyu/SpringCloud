@@ -44,6 +44,12 @@ ribbon:
   MaxAutoRetries: 0 #对当前实例的重试次数
   MaxAutoRetriesNextServer: 1 #切换实例的重试次数 1
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 info: 
   app.name: order-7001
   company.name: www.scloud.com
@@ -89,6 +95,12 @@ ribbon:
   ConnectTimeout: 5000 #请求连接超时时间
   MaxAutoRetries: 0 #对当前实例的重试次数
   MaxAutoRetriesNextServer: 1 #切换实例的重试次数 1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 info: 
   app.name: order-7001-sit
