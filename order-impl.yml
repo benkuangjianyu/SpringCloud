@@ -20,7 +20,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true #是否需要从eureka上获取注册信息
   instance: 
-    instance-id: order-7001
+    instance-id: order-7001-dev
     prefer-ip-address: true
 
 #开启Hystrix 服务
@@ -51,7 +51,7 @@ management:
         include: "*"
 
 info: 
-  app.name: order-7001
+  app.name: order-7001-dev
   company.name: www.scloud.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
