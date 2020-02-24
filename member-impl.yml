@@ -1,0 +1,53 @@
+spring: 
+  profiles: 
+    active: 
+    - dev
+
+---
+server: 
+  port: 6001
+
+spring: 
+  profiles: dev #开发环境
+  application: 
+    name: member-impl
+
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka01.com:5001/eureka/,http://eureka02.com:5002/eureka/,http://eureka03.com:5003/eureka/
+    register-with-eureka: true
+    fetch-registry: true #是否需要从eureka上获取注册信息
+  instance: 
+    instance-id: member-6001
+    prefer-ip-address: true
+
+info: 
+  app.name: member-6001
+  company.name: www.scloud.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+---
+server: 
+  port: 6001
+
+spring: 
+  profiles: sit #开发环境
+  application: 
+    name: member-impl
+
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka01.com:5001/eureka/,http://eureka02.com:5002/eureka/,http://eureka03.com:5003/eureka/
+    register-with-eureka: true
+    fetch-registry: true #是否需要从eureka上获取注册信息
+  instance: 
+    instance-id: member-6001-sit
+    prefer-ip-address: true
+
+info: 
+  app.name: member-6001-sit
+  company.name: www.scloud.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
