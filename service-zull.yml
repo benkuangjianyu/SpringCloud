@@ -13,7 +13,7 @@ eureka:
     fetch-registry: true #是否需要从eureka上获取注册信息
 ###api网关端口号      
 server:
-  port: 9001
+  port: 80
 ###网关名称  
 spring:
   profiles: dev #开发环境
@@ -52,7 +52,7 @@ eureka:
     fetch-registry: true #是否需要从eureka上获取注册信息
 ###api网关端口号      
 server:
-  port: 9002
+  port: 80
 ###网关名称  
 spring:
   profiles: sit #开发环境
