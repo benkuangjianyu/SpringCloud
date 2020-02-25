@@ -41,11 +41,6 @@ zuul:
       path: /api-order/**
       ##订单服务别名
       serviceId: order-impl
-    api-c:
-     ### 当客户端发送请求 127.0.0.1:80/api-order开头的 都会转发到订单服务
-      path: /api-pay/**
-      ##订单服务别名
-      serviceId: pay-impl
 
 #设置ribbon的超时时间小于zuul的超时时间
 ribbon: 
@@ -97,11 +92,6 @@ zuul:
       path: /api-order/**
       ##订单服务别名
       serviceId: order-impl
-    api-c:
-     ### 当客户端发送请求 127.0.0.1:80/api-order开头的 都会转发到订单服务
-      path: /api-pay/**
-      ##订单服务别名
-      serviceId: pay-impl
 
 #设置ribbon的超时时间小于zuul的超时时间
 ribbon: 
