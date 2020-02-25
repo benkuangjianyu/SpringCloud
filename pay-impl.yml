@@ -1,0 +1,65 @@
+﻿spring: 
+  profiles: 
+    active: 
+    - dev
+
+---
+server: 
+  port: 9001
+
+spring: 
+  profiles: dev #开发环境
+  application: 
+    name: pay-impl
+
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka01.com:5001/eureka/,http://eureka02.com:5002/eureka/,http://eureka03.com:5003/eureka/
+    register-with-eureka: true
+    fetch-registry: true #是否需要从eureka上获取注册信息
+  instance: 
+    instance-id: pay-9001
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info: 
+  app.name: pay-9001
+  company.name: www.scloud.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+---
+server: 
+  port: 9002
+
+spring: 
+  profiles: dev #开发环境
+  application: 
+    name: pay-impl
+
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka01.com:5001/eureka/,http://eureka02.com:5002/eureka/,http://eureka03.com:5003/eureka/
+    register-with-eureka: true
+    fetch-registry: true #是否需要从eureka上获取注册信息
+  instance: 
+    instance-id: pay-9002
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info: 
+  app.name: pay-9002
+  company.name: www.scloud.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
