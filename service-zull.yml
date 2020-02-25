@@ -22,6 +22,16 @@ spring:
 
 ###默认服务读取eureka注册服务列表 默认间隔30秒
 
+zuul:
+  host:
+    connect-timeout-millis: 15000 #HTTP连接超时大于Hystrix的超时时间
+    socket-timeout-millis: 60000   #socket超时
+
+#设置ribbon的超时时间小于zuul的超时时间
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
 ###开启所有监控中心接口
 management:
   endpoints:
@@ -60,6 +70,16 @@ spring:
     name: service-zuul
 
 ###默认服务读取eureka注册服务列表 默认间隔30秒
+
+zuul:
+  host:
+    connect-timeout-millis: 15000 #HTTP连接超时大于Hystrix的超时时间
+    socket-timeout-millis: 60000   #socket超时
+
+#设置ribbon的超时时间小于zuul的超时时间
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
 
 ###开启所有监控中心接口
 management:
